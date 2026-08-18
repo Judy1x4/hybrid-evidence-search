@@ -1,8 +1,16 @@
 import math
 import time
 
-from src.bm25_retriever import BM25Retriever
+from typing import Protocol
+from src.models import SearchResult
 
+class Retriever(Protocol):
+    def search(
+        self,
+        query: str,
+        top_k: int = 10,
+    ) -> list[SearchResult]:
+        ...
 
 def recall_at_k(
     ranked_document_ids: list[str],
@@ -82,7 +90,7 @@ def ndcg_at_k(
 
 
 def evaluate(
-    retriever: BM25Retriever,
+    retriever: Retriever,
     queries: dict[str, str],
     qrels: dict[str, dict[str, int]],
     k: int = 10,

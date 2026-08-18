@@ -1,0 +1,49 @@
+{
+  "configuration": {
+    "split": "train",
+    "final_k": 10,
+    "rrf_k": 60,
+    "candidate_depths": [
+      20,
+      30,
+      50
+    ]
+  },
+  "metrics": {
+    "bm25": {
+      "evaluated_queries": 809,
+      "recall@10": 0.7836629583848372,
+      "mrr@10": 0.6242205740969647,
+      "ndcg@10": 0.6584265449186598,
+      "average_latency_ms": 26.87312300987277
+    },
+    "dense": {
+      "evaluated_queries": 809,
+      "recall@10": 0.6592913061392666,
+      "mrr@10": 0.4923798732513195,
+      "ndcg@10": 0.5241885764270617,
+      "average_latency_ms": 19.58382729545363
+    },
+    "hybrid_rrf_20": {
+      "evaluated_queries": 809,
+      "recall@10": 0.8138442521631644,
+      "mrr@10": 0.6151828634214296,
+      "ndcg@10": 0.6565166124473532,
+      "average_latency_ms": 51.46325571962458
+    },
+    "hybrid_rrf_30": {
+      "evaluated_queries": 809,
+      "recall@10": 0.8097651421508035,
+      "mrr@10": 0.6098735456275629,
+      "ndcg@10": 0.6513767418419532,
+      "average_latency_ms": 51.02576874773929
+    },
+    "hybrid_rrf_50": {
+      "evaluated_queries": 809,
+      "recall@10": 0.8019365471775854,
+      "mrr@10": 0.6048850236427492,
+      "ndcg@10": 0.6457984898637847,
+      "average_latency_ms": 49.067433620500864
+    }
+  }
+}

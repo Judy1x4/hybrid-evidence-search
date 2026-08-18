@@ -1,0 +1,4 @@
+artifacts/dense/
+.venv/
+__pycache__/
+*.pyc
